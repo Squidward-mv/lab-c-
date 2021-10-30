@@ -23,7 +23,7 @@ public:
         cout << "\nHouse number - " << houseNum << "\nApartment number - " << apartmentNum << "\nYear of construction - " << yearOfConstruction << endl;
     }
     
-    void q(){
+    virtual void q(){
         cout << "Q = " << apartmentNum + 2 * (currentYear - yearOfConstruction) << endl;
     }
 };
@@ -43,7 +43,7 @@ public:
         cout << "\nHouse number - " << houseNum << "\nApartment number - " << apartmentNum << "\nYear of construction - " << yearOfConstruction << "\nDistrict - " << district <<endl;
     }
 
-    void q() {
+    void q() override {
         if (district == "central"){
             cout << 2 * (apartmentNum + 2 * (currentYear - yearOfConstruction)) << endl;
         }
